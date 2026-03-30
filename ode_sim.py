@@ -2,20 +2,20 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 
-# ==========================================
+
 # 1. BIOPHYSICAL PARAMETERS
-# ==========================================
+
 alpha = 50.0      # Maximum production rate of Killer Protein (nM per hour)
 gamma = 0.1       # Degradation rate of the protein (Proteins decay over time)
 n = 2.0           # Hill coefficient (Cooperativity of the genetic parts)
 K_A = 40.0        # Dissociation constant (Threshold) for miR-210 sensor
 K_R = 40.0        # Dissociation constant (Threshold) for miR-486 sensor
 
-lethal_threshold = 150.0  # The concentration required to trigger Apoptosis (Cell Death)
+lethal_threshold = 150.0  # conc required to trigger Apoptosis 
 
-# ==========================================
+
 # 2. THE ORDINARY DIFFERENTIAL EQUATION (ODE)
-# ==========================================
+
 def perceptron_circuit(P, t, miR_210, miR_486):
     """
     Calculates the change in Killer Protein concentration over time.
@@ -31,10 +31,10 @@ def perceptron_circuit(P, t, miR_210, miR_486):
     dP_dt = (alpha * H_A * H_R) - (gamma * P)
     return dP_dt
 
-# ==========================================
+
 # 3. VIRTUAL CELL PROFILES
-# ==========================================
-# Typical expression levels (relative units) extracted from our TCGA findings
+
+# Typical expression levels (relative units) extracted from TCGA
 cancer_cell  = {'miR_210': 120.0, 'miR_486': 5.0}   # Suffocating, lost tumor suppressor
 healthy_cell = {'miR_210': 10.0,  'miR_486': 150.0} # Normal oxygen, high tumor suppressor
 
