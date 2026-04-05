@@ -1,1 +1,2 @@
-*.h5ad
+*.h5adresults/*_full.csv
+results/soft_logic_search_results_*.csv

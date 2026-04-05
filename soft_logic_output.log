@@ -1,0 +1,111 @@
+================================================================================
+PHASE 8: CONTINUOUS HILL-BASED EXHAUSTIVE CIRCUIT SEARCH
+================================================================================
+
+[1/6] Loading CellxGene h5ad...
+      Total cells before subsample: 117266
+      Total genes: 57398
+      After subsample: 5000 cells
+      After gene filter (min_cells=500): 7595 genes
+      Cancer cells (epithelial): 1551
+      Healthy cells (immune): 3449
+
+[2/6] Computing per-gene Hill function thresholds...
+      K_promoter range: [0.100, 1571.500]
+      K_repressor range: [0.100, 20.000]
+
+[3/6] Selecting top 300 promoters and repressors...
+      Top promoter (cancer-specific): ENSG00000125798
+         (expression ratio cancer/healthy: 637.1x)
+      Top repressor (healthy-specific): ENSG00000211679
+         (expression ratio healthy/cancer: 189.1x)
+
+[4/6] Generating circuit combinations...
+      Total circuits to evaluate: 13,455,000
+      (C(300,2) × 300 = 44,850 × 300 = 13,455,000)
+
+[5/6] Evaluating circuits with continuous Hill functions...
+      (VECTORIZED: no loops over cells)
+         Evaluated 500,000 circuits (243.6s)
+         Evaluated 1,000,000 circuits (504.9s)
+         Evaluated 1,500,000 circuits (771.8s)
+         Evaluated 2,000,000 circuits (1032.1s)
+         Evaluated 2,500,000 circuits (1255.3s)
+         Evaluated 3,000,000 circuits (1487.1s)
+         Evaluated 3,500,000 circuits (1743.4s)
+         Evaluated 4,000,000 circuits (2012.0s)
+         Evaluated 4,500,000 circuits (2284.9s)
+         Evaluated 5,000,000 circuits (2552.7s)
+         Evaluated 5,500,000 circuits (2824.7s)
+         Evaluated 6,000,000 circuits (3090.8s)
+         Evaluated 6,500,000 circuits (3355.2s)
+         Evaluated 7,000,000 circuits (3542.7s)
+         Evaluated 7,500,000 circuits (3764.7s)
+         Evaluated 8,000,000 circuits (3960.4s)
+         Evaluated 8,500,000 circuits (4239.4s)
+         Evaluated 9,000,000 circuits (4505.8s)
+         Evaluated 9,500,000 circuits (4706.8s)
+         Evaluated 10,000,000 circuits (4914.2s)
+         Evaluated 10,500,000 circuits (5073.6s)
+         Evaluated 11,000,000 circuits (5305.5s)
+         Evaluated 11,500,000 circuits (5511.4s)
+         Evaluated 12,000,000 circuits (5704.6s)
+         Evaluated 12,500,000 circuits (5909.0s)
+         Evaluated 13,000,000 circuits (6100.2s)
+      Evaluation Complete: 6259.2 seconds
+
+[6/6] Reporting top 5 continuous-score circuits...
+
+====================================================================================================
+TOP 5 CIRCUITS (CONTINUOUS HILL SCORING)
+====================================================================================================
+
+[RANK 1] Reward: 670.0
+  Promoter 1:  ENSG00000203697
+  Promoter 2:  ENSG00000143375
+  Repressor:   ENSG00000211592
+  Cancer Kills:     335 /   1551 ( 21.60%)
+  Healthy Toxicity:      0 /   3449 (  0.00%)
+
+[RANK 2] Reward: 662.0
+  Promoter 1:  ENSG00000162069
+  Promoter 2:  ENSG00000143375
+  Repressor:   ENSG00000211592
+  Cancer Kills:     331 /   1551 ( 21.34%)
+  Healthy Toxicity:      0 /   3449 (  0.00%)
+
+[RANK 3] Reward: 656.0
+  Promoter 1:  ENSG00000164855
+  Promoter 2:  ENSG00000143375
+  Repressor:   ENSG00000211592
+  Cancer Kills:     328 /   1551 ( 21.15%)
+  Healthy Toxicity:      0 /   3449 (  0.00%)
+
+[RANK 4] Reward: 654.0
+  Promoter 1:  ENSG00000188112
+  Promoter 2:  ENSG00000143375
+  Repressor:   ENSG00000211592
+  Cancer Kills:     327 /   1551 ( 21.08%)
+  Healthy Toxicity:      0 /   3449 (  0.00%)
+
+[RANK 5] Reward: 648.0
+  Promoter 1:  ENSG00000143375
+  Promoter 2:  ENSG00000125798
+  Repressor:   ENSG00000211592
+  Cancer Kills:     324 /   1551 ( 20.89%)
+  Healthy Toxicity:      0 /   3449 (  0.00%)
+
+====================================================================================================
+COMPARISON: CONTINUOUS VS. BOOLEAN DISCRETIZATION
+====================================================================================================
+Traceback (most recent call last):
+  File "C:\Volume D\LUAD_Perceptron\soft_logic_search.py", line 979, in <module>
+    main()
+    ~~~~^^
+  File "C:\Volume D\LUAD_Perceptron\soft_logic_search.py", line 579, in main
+    print(f"\n\u2717 Baseline gene not found: {gene_name}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\FAISAL TABREZ\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2717' in position 2: character maps to <undefined>

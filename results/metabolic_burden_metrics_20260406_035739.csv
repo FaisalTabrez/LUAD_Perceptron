@@ -1,0 +1,4 @@
+Scenario,Transcripts,Cancer_Peak_nM,Healthy_Peak_nM,Circuit_Kills,Time_to_Kill_hr,Cancer_Min_Ribosomes,Healthy_Min_Ribosomes,Cancer_Damage_Score,Healthy_Damage_Score
+low_burden,1,338.18,1.49,Yes,5.29,0.769,0.769,0.872,0.000
+medium_burden,3,231.48,1.02,Yes,9.23,0.526,0.526,0.335,0.000
+high_burden,4,199.94,0.88,Yes,12.40,0.455,0.455,0.185,0.000

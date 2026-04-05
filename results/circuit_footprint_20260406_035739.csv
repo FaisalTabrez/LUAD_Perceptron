@@ -1,0 +1,11 @@
+Component,Nucleotides
+EPCAM_toehold_switch,93
+CXCL17_toehold_switch,93
+SRGN_repressor_construct,500
+Caspase9_ORF,1281
+promoters_terminators,600
+RBS_linkers_spacers,150
+TOTAL_NUCLEOTIDES,2717
+TOTAL_KILOBASES,2.717
+AAV_CAPACITY_KB,4.7
+AAV_HEADROOM_KB,1.983

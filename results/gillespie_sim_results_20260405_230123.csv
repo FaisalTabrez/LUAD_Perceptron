@@ -1,0 +1,11 @@
+Metric,Value
+False-Positive Rate (Healthy),0.00%
+False-Positive Count (Healthy),0 / 10000
+Healthy Max [nM] - Mean,0.00
+Healthy Max [nM] - Std,0.18
+Healthy Max [nM] - Median,0.00
+Cancer Max [nM] - Mean,0.20
+Cancer Max [nM] - Std,19.86
+Cancer Max [nM] - Median,0.00
+Separation (Cancer – Healthy mean) [nM],0.20
+Lethal Threshold [nM],150.0
