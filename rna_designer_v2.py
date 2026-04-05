@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 """
 rna_designer.py — Toehold Switch Sensor Designer for EPCAM mRNA
 ================================================================
