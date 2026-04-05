@@ -121,7 +121,7 @@ STEM_LEN      : int = 18   # domain b: drives strand displacement
 # AGGAGAA (7 nt) — Shine-Dalgarno ribosome binding site
 # ACAGCC (6 nt) — spacer (Kozak-like context for the AUG)
 # AUG (3 nt) — start codon (last nt of loop)
-SWITCH_LOOP   : str = "GCAAGAGGAGAAACAGCCAUG"   # 21 nt
+SWITCH_LOOP   : str = "GCCGCCACCAUG"   # 12 nt
 
 # In-frame linker bridging the switch scaffold to the reporter ORF.
 # 12 nt = 4 codons; verified to contain no UAA, UAG, or UGA stop codons
