@@ -1,5 +1,5 @@
 # LUAD_Perceptron
-
+Vibe Coded attempt to understand bio-stats and circuits
 Python scripts for in silico design and validation of miRNA/gene-driven logic-gate "cellular perceptrons" for LUAD (lung adenocarcinoma).
 
 This repository currently contains standalone analysis scripts (not a packaged module) that cover:
